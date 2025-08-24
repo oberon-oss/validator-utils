@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>eu.oberon.oss</groupId>
+        <artifactId>bom-21</artifactId>
+        <version>1.21.1</version>
+    </parent>
+
+    <groupId>eu.oberon.oss.tools</groupId>
+    <artifactId>validator-utils</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>base</module>
+        <module>jakarta</module>
+        <module>coverage</module>
+    </modules>
+
+    <properties>
+        <argLine/>
+    </properties>
+    <!-- project specific dependencies -->
+
+    <!-- Access to public packages from oberon-oss.eu -->
+    <repositories>
+        <repository>
+            <id>github-public</id>
+            <url>https://public:&#103;hp_UCA2P3c85UHJAXAbYpvrdO75dy6CSz1Yqby2@maven.pkg.github.com/oberon-oss/*
+            </url>
+        </repository>
+    </repositories>
+
+
+</project>
