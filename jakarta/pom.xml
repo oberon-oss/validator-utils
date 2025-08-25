@@ -26,6 +26,7 @@
             <version>${project.version}</version>
         </dependency>
 
+        <!-- Required to test jakarta-validation implementations -->
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.el</artifactId>
