@@ -14,13 +14,6 @@
     <dependencies>
 
         <dependency>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>3.1.1</version>
-            <groupId>jakarta.validation</groupId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <artifactId>validator-utils-base</artifactId>
             <groupId>${project.groupId}</groupId>
             <version>${project.version}</version>
