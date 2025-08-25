@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Generic implementation of the {@link ElevenProofDefinition}, using {@link String} as the class that contains the
@@ -35,8 +36,13 @@ public class StandardElevenProofDefinition<I> implements ElevenProofDefinition<S
      * @since 1.0.0
      */
     public static final ElevenProofComplianceValidator<String> DEFAULT_ELEVEN_PROOF_COMPLIANCE_VALIDATOR = (source, applicableWeightTable, applicableRemainder) -> {
+        final Pattern bsnNumberPattern = Pattern.compile("\\d{9}");
         if (source == null) {
             throw new NullPointerException("Parameter source: cannot be null");
+        }
+
+        if (!bsnNumberPattern.matcher(source).matches()) {
+            throw new IllegalArgumentException("Invalid bsn data: " + source + " for pattern '" + bsnNumberPattern + "'");
         }
 
         if (applicableWeightTable == null) {
@@ -44,7 +50,8 @@ public class StandardElevenProofDefinition<I> implements ElevenProofDefinition<S
         }
 
         if (source.length() != applicableWeightTable.size()) {
-            throw new IllegalArgumentException(source.length() + " is invalid, expected length=" + applicableWeightTable.size());
+            throw new IllegalArgumentException(
+                    "Parameter source: length " + source.length() + " is invalid, expected length=" + applicableWeightTable.size());
         }
 
         if (applicableRemainder == 0) {
