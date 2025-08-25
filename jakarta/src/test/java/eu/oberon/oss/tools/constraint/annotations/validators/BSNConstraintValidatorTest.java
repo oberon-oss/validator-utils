@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 @Log4j2
 class BSNConstraintValidatorTest {
@@ -31,7 +31,7 @@ class BSNConstraintValidatorTest {
         assertNotNull(bsnTestField);
         BSNFieldTestClass invalidBSNNumber = new BSNFieldTestClass("ABCDEFGHI");
         Set<ConstraintViolation<BSNFieldTestClass>> violations = validator.validate(invalidBSNNumber);
-
+        assertEquals(1, violations.size());
     }
 
 }
