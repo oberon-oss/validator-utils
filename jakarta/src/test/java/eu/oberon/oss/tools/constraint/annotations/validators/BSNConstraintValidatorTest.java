@@ -26,7 +26,7 @@ class BSNConstraintValidatorTest {
     }
 
     @Test
-    void isValid()  {
+    void testWithInvalidBSN()  {
         BSNFieldTestClass bsnTestField = new BSNFieldTestClass("bsnTestField");
         assertNotNull(bsnTestField);
         BSNFieldTestClass invalidBSNNumber = new BSNFieldTestClass("ABCDEFGHI");
@@ -34,4 +34,12 @@ class BSNConstraintValidatorTest {
         assertEquals(1, violations.size());
     }
 
+    @Test
+    void testWithValidBSN()  {
+        BSNFieldTestClass bsnTestField = new BSNFieldTestClass("bsnTestField");
+        assertNotNull(bsnTestField);
+        BSNFieldTestClass invalidBSNNumber = new BSNFieldTestClass("301104487");
+        Set<ConstraintViolation<BSNFieldTestClass>> violations = validator.validate(invalidBSNNumber);
+        assertEquals(0, violations.size());
+    }
 }

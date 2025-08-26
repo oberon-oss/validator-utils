@@ -41,10 +41,6 @@ public class StandardElevenProofDefinition<I> implements ElevenProofDefinition<S
             throw new NullPointerException("Parameter source: cannot be null");
         }
 
-        if (!bsnNumberPattern.matcher(source).matches()) {
-            throw new IllegalArgumentException("Invalid bsn data: " + source + " for pattern '" + bsnNumberPattern + "'");
-        }
-
         if (applicableWeightTable == null) {
             throw new NullPointerException("Parameter applicableWeightTable: cannot be null");
         }
@@ -58,6 +54,9 @@ public class StandardElevenProofDefinition<I> implements ElevenProofDefinition<S
             throw new IllegalArgumentException("Parameter applicableRemainder: cannot be 0 (Zero)");
         }
 
+        if (!bsnNumberPattern.matcher(source).matches()) {
+            throw new IllegalArgumentException("Invalid bsn data: " + source + " for pattern '" + bsnNumberPattern + "'");
+        }
 
         int sum = 0;
         for (int i = 0; i < source.length(); i++) {
