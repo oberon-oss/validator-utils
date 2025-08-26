@@ -22,6 +22,7 @@
     </modules>
 
     <properties>
+	<!-- prevent problemns when the argLine argument is not explicitely set -->
         <argLine/>
     </properties>
     <!-- project specific dependencies -->
