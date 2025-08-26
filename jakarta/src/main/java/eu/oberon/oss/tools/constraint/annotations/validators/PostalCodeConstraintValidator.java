@@ -10,6 +10,12 @@ import java.util.Map;
 
 import static eu.oberon.oss.tools.validators.pc.AbstractPostalCodeChecker.getPostalCodeChecker;
 
+/**
+ * Validation class for the {@link PostalCode} annotation interface.
+ *
+ * @author TigerLilly64
+ * @since 1.0.0
+ */
 public class PostalCodeConstraintValidator implements ConstraintValidator<PostalCode, String> {
 
 
