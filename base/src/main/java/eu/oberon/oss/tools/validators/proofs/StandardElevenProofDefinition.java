@@ -1,5 +1,6 @@
-package eu.oberon.oss.tools.proofs;
+package eu.oberon.oss.tools.validators.proofs;
 
+import eu.oberon.oss.tools.validators.BaseValidator;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 

@@ -1,45 +1,33 @@
 package eu.oberon.oss.tools.constraint.annotations.validators;
 
-import eu.oberon.oss.tools.constraint.annotations.validators.cls.BSNFieldTestClass;
+import eu.oberon.oss.tools.constraint.annotations.BSN;
+import eu.oberon.oss.tools.constraint.annotations.ConstraintValidatorTest;
 import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
-import jakarta.validation.ValidatorFactory;
-import lombok.extern.log4j.Log4j2;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@Log4j2
-class BSNConstraintValidatorTest {
-
-    private static Validator validator;
-
-    @BeforeAll
-    static void setup() {
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        validator = factory.getValidator();
-    }
+class BSNConstraintValidatorTest extends ConstraintValidatorTest {
+    private static final String VALID_VALUE = "132827955";
+    private static final String INVALID_VALUE = "";
 
     @Test
-    void testWithInvalidBSN()  {
-        BSNFieldTestClass bsnTestField = new BSNFieldTestClass("bsnTestField");
-        assertNotNull(bsnTestField);
-        BSNFieldTestClass invalidBSNNumber = new BSNFieldTestClass("ABCDEFGHI");
-        Set<ConstraintViolation<BSNFieldTestClass>> violations = validator.validate(invalidBSNNumber);
+    void testWithInvalidBSN() {
+        BSNTestClass testField = new BSNTestClass(INVALID_VALUE);
+        Set<ConstraintViolation<BSNTestClass>> violations = validator.validate(testField);
         assertEquals(1, violations.size());
     }
 
     @Test
-    void testWithValidBSN()  {
-        BSNFieldTestClass bsnTestField = new BSNFieldTestClass("bsnTestField");
-        assertNotNull(bsnTestField);
-        BSNFieldTestClass invalidBSNNumber = new BSNFieldTestClass("301104487");
-        Set<ConstraintViolation<BSNFieldTestClass>> violations = validator.validate(invalidBSNNumber);
+    void testWithValidBSN() {
+        BSNTestClass testClass = new BSNTestClass(VALID_VALUE);
+        Set<ConstraintViolation<BSNTestClass>> violations = validator.validate(testClass);
         assertEquals(0, violations.size());
+    }
+
+    private record BSNTestClass(@BSN String testBSNField) {
+
     }
 }

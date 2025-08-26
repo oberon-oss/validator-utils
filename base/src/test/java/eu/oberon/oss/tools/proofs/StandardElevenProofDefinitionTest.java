@@ -1,11 +1,13 @@
 package eu.oberon.oss.tools.proofs;
 
+import eu.oberon.oss.tools.validators.proofs.StandardElevenProofBuilder;
+import eu.oberon.oss.tools.validators.proofs.StandardElevenProofDefinition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static eu.oberon.oss.tools.proofs.StandardElevenProofDefinition.DEFAULT_ELEVEN_PROOF_COMPLIANCE_VALIDATOR;
+import static eu.oberon.oss.tools.validators.proofs.StandardElevenProofDefinition.DEFAULT_ELEVEN_PROOF_COMPLIANCE_VALIDATOR;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StandardElevenProofDefinitionTest {

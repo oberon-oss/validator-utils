@@ -36,5 +36,17 @@
         </repository>
     </repositories>
 
+    <dependencies>
+        <dependency>
+            <groupId>eu.oberon.oss.tools</groupId>
+            <artifactId>code-tables</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+    </dependencies>
 
 </project>

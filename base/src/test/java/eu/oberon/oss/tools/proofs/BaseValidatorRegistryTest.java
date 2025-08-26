@@ -1,5 +1,7 @@
 package eu.oberon.oss.tools.proofs;
 
+import eu.oberon.oss.tools.validators.BaseValidator;
+import eu.oberon.oss.tools.validators.BaseValidatorRegistry;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

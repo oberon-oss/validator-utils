@@ -1,6 +1,7 @@
 package eu.oberon.oss.tools.constraint.annotations.validators;
 
-import eu.oberon.oss.tools.ValidatorEnum;
+import eu.oberon.oss.tools.validators.proofs.AvailableElevenProofs;
+import eu.oberon.oss.tools.constraint.annotations.BSN;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.extern.log4j.Log4j2;
@@ -13,7 +14,7 @@ import lombok.extern.log4j.Log4j2;
  */
 @Log4j2
 public class BSNConstraintValidator implements ConstraintValidator<BSN, String> {
-    private static final ValidatorEnum BSN_VALIDATOR = ValidatorEnum.BSN;
+    private static final AvailableElevenProofs BSN_VALIDATOR = AvailableElevenProofs.BSN;
 
     /**
      * Default constructor

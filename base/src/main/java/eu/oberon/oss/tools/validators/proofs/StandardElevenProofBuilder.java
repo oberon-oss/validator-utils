@@ -1,4 +1,4 @@
-package eu.oberon.oss.tools.proofs;
+package eu.oberon.oss.tools.validators.proofs;
 
 import java.util.List;
 

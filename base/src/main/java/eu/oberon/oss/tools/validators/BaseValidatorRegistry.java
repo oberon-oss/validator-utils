@@ -1,4 +1,4 @@
-package eu.oberon.oss.tools.proofs;
+package eu.oberon.oss.tools.validators;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

@@ -1,7 +1,6 @@
-package eu.oberon.oss.tools;
+package eu.oberon.oss.tools.validators.proofs;
 
-import eu.oberon.oss.tools.proofs.BaseValidator;
-import eu.oberon.oss.tools.proofs.StandardElevenProofDefinition;
+import eu.oberon.oss.tools.validators.BaseValidator;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
  * @author TigerLilly64
  * @since 1.0.0
  */
-public enum ValidatorEnum implements BaseValidator<String> {
+public enum AvailableElevenProofs implements BaseValidator<String> {
     /**
      * Provides validation of Burger Service Nummer (BSN, Dutch equivalent of the US Social Security Number) type
      * fields.
@@ -20,9 +19,9 @@ public enum ValidatorEnum implements BaseValidator<String> {
      */
     BSN(List.of(9, 8, 7, 6, 5, 4, 3, 2, -1));
 
-    private final StandardElevenProofDefinition<ValidatorEnum> definition;
+    private final StandardElevenProofDefinition<AvailableElevenProofs> definition;
 
-    ValidatorEnum(List<Integer> weightTable) {
+    AvailableElevenProofs(List<Integer> weightTable) {
         definition = StandardElevenProofDefinition.getInstance(this, weightTable);
     }
 

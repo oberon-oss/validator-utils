@@ -1,4 +1,6 @@
-package eu.oberon.oss.tools.proofs;
+package eu.oberon.oss.tools.validators.proofs;
+
+import eu.oberon.oss.tools.validators.BaseValidator;
 
 import java.util.List;
 

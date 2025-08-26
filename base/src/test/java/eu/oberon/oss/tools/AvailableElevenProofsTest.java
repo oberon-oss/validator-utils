@@ -3,10 +3,10 @@ package eu.oberon.oss.tools;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static eu.oberon.oss.tools.ValidatorEnum.BSN;
+import static eu.oberon.oss.tools.validators.proofs.AvailableElevenProofs.BSN;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ValidatorEnumTest {
+class AvailableElevenProofsTest {
     @ParameterizedTest
     @ValueSource(strings = {
             "227141775", "217304035", "489570689", "661769124", "120671220",

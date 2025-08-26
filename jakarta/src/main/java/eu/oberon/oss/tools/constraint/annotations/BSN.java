@@ -1,6 +1,7 @@
-package eu.oberon.oss.tools.constraint.annotations.validators;
+package eu.oberon.oss.tools.constraint.annotations;
 
-import eu.oberon.oss.tools.ValidatorEnum;
+import eu.oberon.oss.tools.validators.proofs.AvailableElevenProofs;
+import eu.oberon.oss.tools.constraint.annotations.validators.BSNConstraintValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -9,7 +10,7 @@ import java.lang.annotation.*;
 /**
  * Annotation that can be used for fields to validate fields expected to contain valid BSN numbers.
  *
- * @see ValidatorEnum#BSN
+ * @see AvailableElevenProofs#BSN
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
