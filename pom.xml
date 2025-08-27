@@ -12,13 +12,13 @@
 
     <groupId>eu.oberon.oss.tools</groupId>
     <artifactId>validator-utils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>base</module>
-        <module>jakarta</module>
-        <module>coverage</module>
+        <module>01-base</module>
+        <module>02-jakarta</module>
+        <module>99-coverage</module>
     </modules>
 
     <properties>
