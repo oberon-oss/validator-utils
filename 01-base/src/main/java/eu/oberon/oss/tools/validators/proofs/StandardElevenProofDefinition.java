@@ -88,6 +88,7 @@ public class StandardElevenProofDefinition<I> implements ElevenProofDefinition<S
      * @since 1.0.0
      */
     public static <I> StandardElevenProofDefinition<I> getInstance(I definitionID, List<Integer> weightTable) {
+        //noinspection unchecked
         return (StandardElevenProofDefinition<I>) builder().setDefinitionID(definitionID).setWeightTable(weightTable).build();
     }
 

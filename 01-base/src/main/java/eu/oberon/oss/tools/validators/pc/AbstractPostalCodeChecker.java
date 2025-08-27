@@ -90,7 +90,7 @@ public abstract class AbstractPostalCodeChecker implements PostalCodeChecker {
      * @since 1.0.0
      */
     public static @Nullable CountryCodeTableEntry findCountryCodeTable(String code) {
-        CountryCodeTableEntry tableEntry = null;
+        CountryCodeTableEntry tableEntry;
         for (CountryCodeTableLookupKeys key : CountryCodeTableLookupKeys.values()) {
             tableEntry = getCountryCodeTable(code, key);
             if (tableEntry != null) {
