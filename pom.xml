@@ -22,8 +22,9 @@
     </modules>
 
     <properties>
-	<!-- prevent problemns when the argLine argument is not explicitely set -->
+        <!-- prevent problemns when the argLine argument is not explicitely set -->
         <argLine/>
+        <sonar.organization>oberon-oss-eu</sonar.organization>
     </properties>
     <!-- project specific dependencies -->
 
